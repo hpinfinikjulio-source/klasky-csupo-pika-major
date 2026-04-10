@@ -1,0 +1,720 @@
+@font-face {
+    font-family: 'Straw Milky';
+    src: url('./Straw Milky.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Straw Milky', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    max-width: 80%;
+    max-height: 80vh;
+    object-fit: contain;
+    user-select: none;
+    pointer-events: none;
+    position: relative;
+    transition: filter 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.button-group {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 10px;
+    z-index: 10;
+    padding: 15px;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;  /* Hide scrollbar for IE/Edge */
+}
+
+.button-group::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.luig-button, .mari-button, .gmajor-button, .gmajor5-button, .gmajor2-button, .pika-button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.08s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.luig-button {
+    background-color: #000;
+}
+
+.mari-button {
+    background-color: #e60012;
+}
+
+.gmajor-button {
+    background-color: #6a0dad; /* Purple for G Major vibe */
+}
+
+.gmajor5-button {
+    background-color: #2ecc71; /* Green for G Major 5 vibe */
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.08s;
+}
+
+.gmajor2-button {
+    background-color: #d35400; /* Deep orange for G Major 2 */
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.08s;
+}
+
+.gmajor4-button {
+    background-color: #3498db; /* Blue-cyan for G Major 4 */
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.08s;
+}
+
+/* G Major 11: mirrored, gray, inverted */
+.gmajor11-button {
+    background-color: #7f8c8d; /* muted gray */
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.08s;
+    flex-shrink: 0;
+}
+
+/* G Major 1: strong hue shift + inverted visual emphasis */
+.gmajor1-button {
+    background-color: #34495e; /* muted slate to contrast */
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.14);
+    flex-shrink: 0;
+}
+
+.gmajor-new-button {
+    background-color: #9b59b6; /* muted violet for G Major */
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.08s;
+    flex-shrink: 0;
+}
+
+.gmajor7-button {
+    background-color: #e056fd;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.08s;
+    flex-shrink: 0;
+}
+
+.gmajor7-button:active {
+    transform: scale(0.95);
+}
+
+.original-gmajor-button {
+    background-color: #8e44ad; /* deeper violet for Original G Major */
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.08s;
+    flex-shrink: 0;
+}
+
+.fakeg-button {
+    background-color: #1abc9c; /* teal to stand out */
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.14);
+    flex-shrink: 0;
+}
+
+.pika-button {
+    background-color: #ffcc00; /* Pikachu Yellow */
+    color: #000;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+}
+
+.kmajor-button {
+    background-color: #2c3e50; /* Dark slate for spooky vibe */
+    color: #ff6b6b; /* Slightly alarming red */
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+    flex-shrink: 0;
+}
+
+.conga-button {
+    background-color: #d35400; /* Warm orange for conga vibe */
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+    flex-shrink: 0;
+}
+
+.scaryroll-button {
+    background-color: #1a0000; /* Very dark red */
+    color: #ff3333; /* Bright scary red */
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: 1px solid #4a0000;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255,0,0,0.2);
+    flex-shrink: 0;
+}
+
+.mikeson-button {
+    background-color: #1e3799; /* Deep blue */
+    color: #4a69bd; /* Lighter blue/purple */
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    flex-shrink: 0;
+}
+
+.luig-button:active, .mari-button:active, .gmajor-button:active, .pika-button:active, .gmajor5-button:active, .scaryroll-button:active, .mikeson-button:active {
+    transform: scale(0.95);
+}
+
+.killedx-button {
+    background-color: #000000;
+    color: #ff0000;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: 2px solid #ff0000;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255,0,0,0.4);
+    flex-shrink: 0;
+}
+
+.killedx-button:active {
+    transform: scale(0.9);
+}
+
+.custom3-button {
+    background-color: #00cec9;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.custom3-button:active {
+    transform: scale(0.95);
+}
+
+.cryingx-button {
+    background-color: #4834d4;
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.cryingx-button:active {
+    transform: scale(0.95);
+}
+
+.confusion-button {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: #000;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: 2px dashed #000;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.confusion-button:active {
+    transform: scale(0.95);
+}
+
+.lowvoice-button {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: 2px solid #34495e;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.lowvoice-button:active {
+    transform: scale(0.95);
+}
+
+.sad-button {
+    background-color: #576574;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.sad-button:active {
+    transform: scale(0.95);
+}
+
+.happy-button {
+    background-color: #f9ca24;
+    color: #000;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.happy-button:active {
+    transform: scale(0.95);
+}
+
+.gmajor90-button {
+    background-color: #0fb9b1;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.gmajor90-button:active {
+    transform: scale(0.95);
+}
+
+.kart-button {
+    background-color: #6d214f;
+    color: #eccc68;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: 2px solid #eccc68;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.kart-button:active {
+    transform: scale(0.95);
+}
+
+.notscary-button {
+    background-color: #7ed6df;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.notscary-button:active {
+    transform: scale(0.95);
+}
+
+.mediabottle-button {
+    background-color: #6c5ce7;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.mediabottle-button:active {
+    transform: scale(0.95);
+}
+
+.gmajor-trill-button {
+    background-color: #2c2c54;
+    color: #4073ff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: 2px solid #4073ff;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(64, 115, 255, 0.3);
+    flex-shrink: 0;
+}
+
+.gmajor-trill-button:active {
+    transform: scale(0.95);
+}
+
+.amajor-button {
+    background-color: #ff9f43;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.amajor-button:active {
+    transform: scale(0.95);
+}
+
+.huecycle-button {
+    background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.huecycle-button:active {
+    transform: scale(0.95);
+}
+
+.rgbabgra-button {
+    background-color: #341f97;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: 2px solid #54a0ff;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.rgbabgra-button:active {
+    transform: scale(0.95);
+}
+
+.gmajor808-button {
+    background-color: #ff4757;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    border: 2px solid #2f3542;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.gmajor808-button:active {
+    transform: scale(0.95);
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.hue-cycling {
+    animation: hueCycleAnim 4s linear infinite;
+}
+
+@keyframes hueCycleAnim {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
+}
+
+.swirling-ccw {
+    animation: swirlCCW 2s infinite linear;
+}
+
+@keyframes swirlCCW {
+    from { rotate: 0deg; }
+    to { rotate: -360deg; }
+}
+
+.wavy-horizontal {
+    animation: horizontalWave 0.15s infinite ease-in-out;
+}
+
+.wavy-vertical {
+    animation: verticalWave 0.15s infinite ease-in-out;
+}
+
+@keyframes horizontalWave {
+    0% { left: 0; }
+    25% { left: -8px; }
+    75% { left: 8px; }
+    100% { left: 0; }
+}
+
+@keyframes verticalWave {
+    0% { top: 0; }
+    25% { top: -8px; }
+    75% { top: 8px; }
+    100% { top: 0; }
+}
+
+@media (max-width: 600px) {
+    .button-group {
+        bottom: 10px;
+    }
+    .luig-button, .mari-button, .gmajor-button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 3px solid #6c5ce7;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.go-now-button {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Straw Milky', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.continue-button {
+    background-color: #ecf0f1;
+    color: #333;
+    padding: 12px 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-family: 'Straw Milky', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.go-now-button:hover, .continue-button:hover {
+    transform: scale(1.05);
+}
+
+.go-now-button:active, .continue-button:active {
+    transform: scale(0.95);
+}
+
+/* Reset button styling */
+.reset-button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Straw Milky', sans-serif;
+    color: #000;
+    background: #ffffff;
+    border: 2px solid #333;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    flex-shrink: 0;
+}
+
+.reset-button:active {
+    transform: scale(0.95);
+}

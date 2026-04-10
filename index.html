@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klasky Csupo - Pika Major</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true" focusable="false">
+        <filter id="bgrFilter">
+            <feColorMatrix type="matrix" values="0 0 1 0 0 
+                                                 0 1 0 0 0 
+                                                 1 0 0 0 0 
+                                                 0 0 0 1 0" />
+        </filter>
+        <filter id="gbInvertFilter">
+            <feColorMatrix type="matrix" values="1  0  0 0 0 
+                                                 0 -1  0 0 1 
+                                                 0  0 -1 0 1 
+                                                 0  0  0 1 0" />
+        </filter>
+        <filter id="rgInvertFilter">
+            <feColorMatrix type="matrix" values="-1  0  0 0 1 
+                                                 0 -1  0 0 1 
+                                                 0  0  1 0 0 
+                                                 0  0  0 1 0" />
+        </filter>
+    </svg>
+
+    <div id="moveModal" class="modal-overlay">
+        <div class="modal-content">
+            <p>This project has moved to a new one!</p>
+            <div class="modal-buttons">
+                <button id="goNowBtn" class="go-now-button">Go Now</button>
+                <button id="continueBtn" class="continue-button">Continue Playing</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="logoWrapper" class="logo-wrapper">
+            <img src="./Klasky_Csupo_1998_Robot_Logo.webp" alt="Klasky Csupo Logo" class="logo" id="logo">
+        </div>
+    </div>
+    <div class="button-group">
+        <button id="luigBtn" class="luig-button">Luig Group</button>
+        <button id="mariBtn" class="mari-button">Mari Group</button>
+        <button id="gMajorBtn" class="gmajor-button">G Major 225</button>
+        <button id="pikaBtn" class="pika-button">Pika Major</button>
+        <button id="gMajor5Btn" class="gmajor5-button">G Major 5</button>
+        <button id="gMajor4Btn" class="gmajor4-button">G Major 4</button>
+        <button id="gMajor2Btn" class="gmajor2-button">G Major 2</button>
+        <button id="gMajor1Btn" class="gmajor1-button">G Major 1</button>
+        <button id="gMajorNewBtn" class="gmajor-new-button">G Major</button>
+        <button id="gMajor7Btn" class="gmajor7-button">G-Major 7</button>
+        <button id="originalGMajorBtn" class="original-gmajor-button">Original G Major</button>
+        <button id="gMajor11Btn" class="gmajor11-button">G Major 11</button>
+        <button id="fakeGBtn" class="fakeg-button">Fake G Major</button>
+        <button id="kMajorBtn" class="kmajor-button">K Major</button>
+        <button id="congaBtn" class="conga-button">Conga Busher</button>
+        <button id="scaryrollBtn" class="scaryroll-button">Scaryroll</button>
+        <button id="mikesonBtn" class="mikeson-button">Mikeson's G Major 36</button>
+        <button id="killedXBtn" class="killedx-button">I KILLED X</button>
+        <button id="custom3Btn" class="custom3-button">Custom Major 3</button>
+        <button id="cryingXBtn" class="cryingx-button">Crying X</button>
+        <button id="confusionBtn" class="confusion-button">CoNfUsIoN</button>
+        <button id="lowVoiceBtn" class="lowvoice-button">Low Voice</button>
+        <button id="sadBtn" class="sad-button">Sad</button>
+        <button id="happyBtn" class="happy-button">Happy</button>
+        <button id="gMajor90Btn" class="gmajor90-button">G-Major 90</button>
+        <button id="kartBtn" class="kart-button">Kart Dar Varer</button>
+        <button id="notScaryBtn" class="notscary-button">Not Scary</button>
+        <button id="mediaBottleBtn" class="mediabottle-button">Braxton Hudson's G-Major 74</button>
+        <button id="gMajorTrillBtn" class="gmajor-trill-button">G-Major 1 Trillicillion</button>
+        <button id="aMajorBtn" class="amajor-button">A-Major</button>
+        <button id="hueCycleBtn" class="huecycle-button">Hue Cycle</button>
+        <button id="rgbaBgraBtn" class="rgbabgra-button">RGBA to BGRA</button>
+        <button id="gMajor808Btn" class="gmajor808-button">G Major 808</button>
+        <button id="resetBtn" class="reset-button">Reset</button>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
