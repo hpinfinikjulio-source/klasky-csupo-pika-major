@@ -47,7 +47,7 @@ const goNowBtn = document.getElementById('goNowBtn');
 const continueBtn = document.getElementById('continueBtn');
 
 goNowBtn.addEventListener('click', () => {
-    window.location.href = "https://websim.com/@DavidMalware/sony-vegas-pro-13-0-classics-effects";
+    window.location.href = "https://hpinfinikjulio-source.github.io/nintendo-corrupter";
 });
 
 continueBtn.addEventListener('click', () => {
