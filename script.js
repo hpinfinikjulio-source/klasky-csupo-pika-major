@@ -39,6 +39,8 @@ const aMajorBtn = document.getElementById('aMajorBtn');
 const hueCycleBtn = document.getElementById('hueCycleBtn');
 const rgbaBgraBtn = document.getElementById('rgbaBgraBtn');
 const gMajor808Btn = document.getElementById('gMajor808Btn');
+const gMajor74Btn = document.getElementById('gMajor74Btn');
+const gMinor305Btn = document.getElementById('gMinor305Btn');
 const resetBtn = document.getElementById('resetBtn');
 const buttonGroup = document.querySelector('.button-group');
 
@@ -47,7 +49,7 @@ const goNowBtn = document.getElementById('goNowBtn');
 const continueBtn = document.getElementById('continueBtn');
 
 goNowBtn.addEventListener('click', () => {
-    window.location.href = "https://hpinfinikjulio-source.github.io/nintendo-corrupter";
+    window.location.href = "https://websim.com/@DavidMalware/sony-vegas-pro-13-0-classics-effects";
 });
 
 continueBtn.addEventListener('click', () => {
@@ -90,6 +92,8 @@ aMajorBtn.addEventListener('click', effects.aMajor);
 hueCycleBtn.addEventListener('click', effects.hueCycle);
 rgbaBgraBtn.addEventListener('click', effects.rgbaToBgra);
 gMajor808Btn.addEventListener('click', effects.gMajor808);
+gMajor74Btn.addEventListener('click', effects.gMajor74);
+gMinor305Btn.addEventListener('click', effects.gMinor305);
 
 resetBtn.addEventListener('click', () => {
     resetState();

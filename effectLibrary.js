@@ -306,5 +306,25 @@ export const effects = {
                 .flatMap(p => [p + 1, p + 6]);
         }
         updateVisuals();
+    }, 
+    gMajor74: () => {
+        prepareEffect();
+        state.hueShift += 180;
+        state.isInverted = true;
+        state.isPunched = true;
+        if (state.pitchOffsets.length < 1024) {
+            state.pitchOffsets = state.pitchOffsets.flatMap(p => [p - 10, p + 9, p + 14]);
+        }
+        updateVisuals();
+    },
+    gMinor305: () => {
+        prepareEffect();
+        state.hueShift += 120;
+        if (state.pitchOffsets.length < 512) {
+            state.pitchOffsets = state.pitchOffsets
+                .flatMap(p => [p + 7, p - 12])
+                .flatMap(p => [p + 7, p - 12]);
+        }
+        updateVisuals();
     }
 };
