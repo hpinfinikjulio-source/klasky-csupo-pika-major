@@ -591,21 +591,21 @@ body {
     transform: scale(0.95);
 }
 
-.gminor305-button {
-    background-color: #175395;
+.gmajor65-button {
+    background-color: #fa37a5;
     color: #fff;
     padding: 8px 12px;
     font-size: 0.85rem;
     font-weight: bold;
     font-family: 'Straw Milky', sans-serif;
-    border: 2px solid #1694fa;
+    border: 2px solid #000000;
     border-radius: 6px;
     cursor: pointer;
     box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     flex-shrink: 0;
 }
 
-.gminor305-button:active {
+.gmajor65-button:active {
     transform: scale(0.95);
 }
 

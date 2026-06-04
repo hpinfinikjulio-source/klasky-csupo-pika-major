@@ -94,6 +94,7 @@ rgbaBgraBtn.addEventListener('click', effects.rgbaToBgra);
 gMajor808Btn.addEventListener('click', effects.gMajor808);
 gMajor74Btn.addEventListener('click', effects.gMajor74);
 gMinor305Btn.addEventListener('click', effects.gMinor305);
+gMajor65Btn.addEventListener('click', effects.gMajor65);
 
 resetBtn.addEventListener('click', () => {
     resetState();

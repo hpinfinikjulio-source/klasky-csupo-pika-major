@@ -326,5 +326,13 @@ export const effects = {
                 .flatMap(p => [p + 7, p - 12]);
         }
         updateVisuals();
+    }, 
+    gMajor65: () => {
+        prepareEffect();
+        state.isRgInverted = true;
+        state.isMirrored = true;
+        state.speed = 1.435;
+        state.semitoneShift+= 6;
+        updateVisuals();
     }
 };
